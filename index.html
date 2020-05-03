@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Menu</title>
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <meta charset='utf-8'>
+        <style>
+            /*** Base style ***/
+
+            * { box-sizing: border-box;}
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                width: 100%;
+            }
+            .items, .name { border: 1px solid black; }
+            #heading {
+                text-align: center;
+                margin: 1em;
+                font-size: 1.75em;
+            }
+            .items { background-color: rgb(194, 194, 194); }
+            .name {
+                float: right;
+                padding: 0 20px 0 20px;
+                right: 0;
+                top: 0;
+                margin: 0 0 5px 5px;
+                font-size: 1.25em;
+            }
+            .text { padding: 10px;}
+            #Chicken { background-color: rgb(253, 236, 0); }
+            #Beef { 
+                background-color: tomato;
+                color: white;
+            }
+            #Sushi { 
+                background-color: rgb(49, 145, 255);
+                color: white;
+            }
+
+            /*** Large deviced only ***/
+            @media (min-width: 992px) {
+                .col-lg-4 {
+                    float: left;
+                    width: 31%;
+                    margin: 1%;
+                }
+            }
+
+            /*** Medium deviced only ***/
+            @media (min-width: 768px) and (max-width: 991px) {
+                .col-md-4 { 
+                    float: left;
+                    width: 46%;
+                    margin: 1%;
+                }
+                #div_Sushi {
+                    clear: left;
+                    width: 94%;
+                    margin: 1%;
+                }
+            }
+
+            /*** Small deviced only ***/
+            @media (max-width: 767px) {
+                .col-sm-4 {
+                    width: 90%;
+                    margin: 2% 5% 2% 5%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="heading">Our Menu</div>
+        <div class="container">
+            <div class="items col-lg-4 col-md-4 col-sm-4" id="div_Chicken">
+                <p class="name" id="Chicken">Chicken</p>
+                <p class="text" id="text_Chicken">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="items col-lg-4 col-md-4 col-sm-4" id="div_Beef">
+                <p class="name" id="Beef">Beef</p>
+                <p class="text"  id="text_Beef">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="items col-lg-4 col-md-4 col-sm-4" id="div_Sushi">
+                <p class="name" id="Sushi">Sushi</p>
+                <p class="text"  id="text_Sushi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </body>
+</html>
